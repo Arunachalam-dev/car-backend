@@ -10,7 +10,7 @@ const stripeRoutes = require('./Routers/PaymentIntentroute');
 dotenv.config();
 
 app.use(cors({
-  origin: 'https://mellifluous-crostata-fd921d.netlify.app',
+  origin: 'stellar-medovik-951992.netlify.app',
   methods: ['POST', 'GET'],
   credentials: true,
 }));
