@@ -26,14 +26,16 @@ app.use('/api/stripe', stripeRoutes);
 // Static files
 app.use(express.static(path.join(__dirname, 'client/build')));
 
-app.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-});
 
 // Health check
 app.get('/', (req, res) => {
   res.send("hello Arun");
 });
+
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+});
+
 
 process.on('uncaughtException', err => {
   console.error('Uncaught Exception:', err.stack || err.message);
