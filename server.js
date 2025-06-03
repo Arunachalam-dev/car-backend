@@ -3,6 +3,7 @@ let app = express();
 let port =  process.env.PORT || 2010;
 let dbconnection = require('./db');
 const cors = require('cors');
+const path = require('path');
  dotenv = require('dotenv');
 const stripeRoutes = require('./Routers/PaymentIntentroute');
 dotenv.config();
