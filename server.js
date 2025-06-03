@@ -14,7 +14,7 @@ app.use('/api/cars/', require('./Routers/carrouter'));
 app.use('/api/users/', require('./Routers/userroute'));
 app.use('/api/bookings/',require('./Routers/bookingrouter'));
 app.use('/api/stripe', stripeRoutes);
-app.use('/api/bookings',require('./Routers/bookingrouter'))
+
 
 // const path= require('path')
 // if(process.env.NODE_ENV==="production"){
