@@ -10,7 +10,7 @@ const stripeRoutes = require('./Routers/PaymentIntentroute');
 dotenv.config();
 
 app.use(cors({
-  origin: 'stellar-medovik-951992.netlify.app',
+  origin: 'https://carss-q045.onrender.com',
   methods: ['POST', 'GET'],
   credentials: true,
 }));
