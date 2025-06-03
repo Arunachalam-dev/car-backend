@@ -23,6 +23,12 @@ app.use('/api/bookings',require('./Routers/bookingrouter'))
 //   })
 // }
 
+
+app.use(cors({
+  origin: 'mellifluous-crostata-fd921d.netlify.app',
+  methods: ['POST', 'GET'],
+  credentials: true,
+}));
 process.on('uncaughtException', err => {
   console.error('Uncaught Exception:', err.stack || err.message);
 });
