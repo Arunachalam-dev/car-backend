@@ -23,6 +23,12 @@ app.use('/api/bookings',require('./Routers/bookingrouter'))
 //   })
 // }
 
+app.use(express.static(path.join(__dirname, 'build')));
+
+app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
 
 app.use(cors({
   origin: 'mellifluous-crostata-fd921d.netlify.app',
@@ -40,7 +46,7 @@ process.on('uncaughtException', err => {
 // app.use(cors(corsOptions));
 
 app.get('/', (req, res) => {
-  res.send("hello");
+  res.send("hello Arun");
 });
 
 app.listen(port, () => console.log(`server is ready on ${port}`));
