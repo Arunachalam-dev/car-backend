@@ -10,7 +10,7 @@ const stripeRoutes = require('./Routers/PaymentIntentroute');
 dotenv.config();
 
 app.use(cors({
-  origin: 'https://carss-q045.onrender.com',
+  origin: 'remarkable-paprenjak-0de637.netlify.app',
   methods: ['POST', 'GET'],
   credentials: true,
 }));
